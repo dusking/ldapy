@@ -50,7 +50,7 @@ class LdapConnection(object):
             error_msg = []
             if type(e.message) is dict:
                 for (k, v) in e.message.iteritems():
-                    error_msg.append("%s: %sn" % (k, v))
+                    error_msg.append("%s: %s\n" % (k, v))
             else:
                 error_msg.append(e.message)
             raise Exception(error_msg)
